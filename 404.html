@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Not Found • Test Site</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/site.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Test Site</span>
+          </a>
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">404 — Page not found</h1>
+                <p class="lede">If you got here from a link, the path might be wrong. Otherwise, this is working as expected.</p>
+                <div class="card">
+                  <h2>Go back</h2>
+                  <p><a href="index.html">Home</a> • <a href="pages/about.html">About</a> • <a href="pages/products.html">Products</a> • <a href="pages/contact.html">Contact</a></p>
+                </div>
+              </div>
+              <div class="aside">
+                <div class="card">
+                  <h2>Debug info</h2>
+                  <p class="small">Path: <span class="code" id="p"></span></p>
+                  <p class="small">Referrer: <span class="code" id="r"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById('p').textContent = location.pathname;
+      document.getElementById('r').textContent = document.referrer || '(none)';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Site • Products</title>
+    <meta name="description" content="Example products page for GitHub Pages test site." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script defer src="../assets/js/site.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="../index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Test Site</span>
+          </a>
+
+          <div class="navlinks" aria-label="Primary">
+            <a class="pill" data-nav href="../index.html">Home</a>
+            <a class="pill" data-nav href="about.html">About</a>
+            <a class="pill" data-nav href="products.html">Products</a>
+            <a class="pill" data-nav href="contact.html">Contact</a>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">Products</h1>
+                <p class="lede">Simple cards you can use to test layout, spacing, and content density.</p>
+
+                <div class="grid" style="padding-bottom: 0;">
+                  <div class="card">
+                    <h2>Widget Alpha</h2>
+                    <p>Fast, minimal, and great for smoke tests.</p>
+                  </div>
+                  <div class="card">
+                    <h2>Widget Beta</h2>
+                    <p>More features, same clean UI.</p>
+                  </div>
+                  <div class="card">
+                    <h2>Widget Gamma</h2>
+                    <p>Best for testing long-ish descriptions and wrapping.</p>
+                  </div>
+                </div>
+
+                <div style="height: 12px"></div>
+                <div class="notice small">
+                  Want a deeper test? Add images under <span class="code">assets/img/</span> and use <span class="code">&lt;img&gt;</span> tags here.
+                </div>
+              </div>
+
+              <div class="aside">
+                <div class="card">
+                  <h2>Notes</h2>
+                  <p class="small">This is placeholder content. Swap in anything you need for layout testing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">Try the <a href="contact.html">Contact</a> page next.</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Site • Home</title>
+    <meta name="description" content="A small multi-page static site for GitHub Pages testing." />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/site.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Test Site</span>
+          </a>
+
+          <div class="navlinks" aria-label="Primary">
+            <a class="pill" data-nav href="index.html">Home</a>
+            <a class="pill" data-nav href="pages/about.html">About</a>
+            <a class="pill" data-nav href="pages/products.html">Products</a>
+            <a class="pill" data-nav href="pages/contact.html">Contact</a>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+            <a class="btn" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">A multi-page static site for quick testing</h1>
+                <p class="lede">Use this repo to validate GitHub Pages, navigation, theming, and basic SEO files. It’s intentionally simple, fast, and dependency-free.</p>
+
+                <div class="kpis">
+                  <div class="kpi"><strong>4 pages</strong><span>Home, About, Products, Contact</span></div>
+                  <div class="kpi"><strong>Responsive</strong><span>Looks good on mobile</span></div>
+                  <div class="kpi"><strong>No build step</strong><span>Just HTML/CSS/JS</span></div>
+                </div>
+              </div>
+
+              <div class="aside">
+                <div class="card">
+                  <h2>Quick links</h2>
+                  <p><a href="pages/about.html">Learn more</a> • <a href="pages/products.html">Browse products</a> • <a href="pages/contact.html">Send a message</a></p>
+                  <div style="height:12px"></div>
+                  <div class="notice small">
+                    Tip: this is meant for GitHub Pages at <span class="code">https://YOURUSERNAME.github.io</span>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h2>Navigation</h2>
+              <p>Top nav highlights the current page automatically.</p>
+            </div>
+            <div class="card">
+              <h2>Theme</h2>
+              <p>Toggle dark/light theme; preference is stored in localStorage.</p>
+            </div>
+            <div class="card">
+              <h2>Contact form</h2>
+              <p>Client-side-only demo form (no backend) for UI testing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">
+        <div>© <span id="y"></span> Test Site • Built for GitHub Pages</div>
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

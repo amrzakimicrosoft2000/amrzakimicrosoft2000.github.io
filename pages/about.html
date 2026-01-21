@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Site • About</title>
+    <meta name="description" content="About this GitHub Pages test site." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script defer src="../assets/js/site.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="../index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Test Site</span>
+          </a>
+
+          <div class="navlinks" aria-label="Primary">
+            <a class="pill" data-nav href="../index.html">Home</a>
+            <a class="pill" data-nav href="about.html">About</a>
+            <a class="pill" data-nav href="products.html">Products</a>
+            <a class="pill" data-nav href="contact.html">Contact</a>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+            <a class="btn" href="../404.html">404</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">About this website</h1>
+                <p class="lede">This is a tiny static site used for testing GitHub Pages and basic navigation across multiple pages.</p>
+
+                <div class="card">
+                  <h2>What’s included</h2>
+                  <p class="small">A shared header/footer, responsive layout, theme toggle, and example content pages. Everything is plain HTML/CSS/JS so it’s easy to tweak.</p>
+                </div>
+              </div>
+
+              <div class="aside">
+                <div class="card">
+                  <h2>Files to know</h2>
+                  <p class="small">Styles: <span class="code">assets/css/styles.css</span></p>
+                  <p class="small">JS: <span class="code">assets/js/site.js</span></p>
+                  <p class="small">Pages: <span class="code">pages/*.html</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h2>Why static?</h2>
+              <p>It’s the simplest way to validate hosting, caching, and routing behavior.</p>
+            </div>
+            <div class="card">
+              <h2>How to extend</h2>
+              <p>Add more pages under <span class="code">pages/</span> and link them in the nav.</p>
+            </div>
+            <div class="card">
+              <h2>SEO basics</h2>
+              <p>Add <span class="code">robots.txt</span> and <span class="code">sitemap.xml</span> if you want to test crawlers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">Back to <a href="../index.html">Home</a></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Test Site • Contact</title>
+    <meta name="description" content="Contact page for the GitHub Pages test site." />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script defer src="../assets/js/site.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="../index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Test Site</span>
+          </a>
+
+          <div class="navlinks" aria-label="Primary">
+            <a class="pill" data-nav href="../index.html">Home</a>
+            <a class="pill" data-nav href="about.html">About</a>
+            <a class="pill" data-nav href="products.html">Products</a>
+            <a class="pill" data-nav href="contact.html">Contact</a>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">Contact</h1>
+                <p class="lede">A no-backend form for UI testing. (It doesn’t send anything.)</p>
+
+                <div class="card">
+                  <h2>Message</h2>
+                  <form class="form" onsubmit="event.preventDefault(); alert('Thanks! (Demo only — no message was sent)');">
+                    <label>
+                      <div class="small">Name</div>
+                      <input class="input" name="name" autocomplete="name" placeholder="Jane Doe" required />
+                    </label>
+                    <label>
+                      <div class="small">Email</div>
+                      <input class="input" type="email" name="email" autocomplete="email" placeholder="jane@example.com" required />
+                    </label>
+                    <label>
+                      <div class="small">Message</div>
+                      <textarea class="textarea" name="message" placeholder="Hello..." required></textarea>
+                    </label>
+                    <button class="btn" type="submit">Send (demo)</button>
+                  </form>
+                </div>
+              </div>
+
+              <div class="aside">
+                <div class="card">
+                  <h2>Tips</h2>
+                  <p class="small">To test 404 handling, visit <a href="../does-not-exist">/does-not-exist</a> after Pages is enabled.</p>
+                  <div style="height:10px"></div>
+                  <div class="notice small">GitHub Pages for user sites expects the repo name to be <span class="code">YOURUSERNAME.github.io</span>.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">Back to <a href="../index.html">Home</a></div>
+    </footer>
+  </body>
+</html>
