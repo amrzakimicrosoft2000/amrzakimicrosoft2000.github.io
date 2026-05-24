@@ -3,19 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test Site • About</title>
-    <meta name="description" content="About this GitHub Pages test site." />
+    <title>Clarity ↔ UET Test Site • About</title>
+    <meta name="description" content="About this Clarity ↔ UET integration test site." />
     <meta name="google-site-verification" content="ScYNW9LYapYnzFp-hJct72IO7NpnL2sPmynakqmTnoI" />
+
+    <!-- Google Tag Manager (installs Clarity) -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-242578999');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <script defer src="../assets/js/site.js"></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-242578999"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header class="header">
       <div class="container">
         <nav class="nav">
           <a class="brand" href="../index.html" aria-label="Home">
             <span class="logo" aria-hidden="true"></span>
-            <span>Test Site</span>
+            <span>Clarity ↔ UET Test Site</span>
           </a>
 
           <div class="navlinks" aria-label="Primary">
@@ -39,12 +55,12 @@
           <div class="heroCard">
             <div class="heroInner">
               <div>
-                <h1 class="h1">About this website</h1>
-                <p class="lede">This is a tiny static site used for testing GitHub Pages and basic navigation across multiple pages.</p>
+                <h1 class="h1">About this site</h1>
+                <p class="lede">This is a thin static host used to validate the integration between <strong>Microsoft Clarity</strong> and <strong>UET</strong> (Universal Event Tracking). Clarity is loaded through Google Tag Manager against the Clarity staging environment.</p>
 
                 <div class="card">
-                  <h2>What’s included</h2>
-                  <p class="small">A shared header/footer, responsive layout, theme toggle, and example content pages. Everything is plain HTML/CSS/JS so it’s easy to tweak.</p>
+                  <h2>What it tests</h2>
+                  <p class="small">When MsAds linking is enabled on the Clarity project, Clarity is expected to inject the UET tag into the host page. The site intentionally ships <em>no</em> hand-rolled UET so any <span class="code">bat.bing.com</span> requests you see are attributable to the Clarity integration.</p>
                 </div>
               </div>
 
@@ -61,16 +77,16 @@
 
           <div class="grid">
             <div class="card">
-              <h2>Why static?</h2>
-              <p>It’s the simplest way to validate hosting, caching, and routing behavior.</p>
+              <h2>Clarity via GTM</h2>
+              <p>Every page embeds the standard GTM snippet (<span class="code">GTM-242578999</span>). Configure the container to load Clarity from the staging tag host.</p>
             </div>
             <div class="card">
-              <h2>How to extend</h2>
-              <p>Add more pages under <span class="code">pages/</span> and link them in the nav.</p>
+              <h2>Staging endpoint</h2>
+              <p>Clarity should be configured to point at <span class="code">https://claritydashboard.asgfalcon-staging.io</span>.</p>
             </div>
             <div class="card">
-              <h2>SEO basics</h2>
-              <p>Add <span class="code">robots.txt</span> and <span class="code">sitemap.xml</span> if you want to test crawlers.</p>
+              <h2>Verifying UET</h2>
+              <p>Watch DevTools Network for <span class="code">bat.bing.com</span> requests &mdash; that's the injected UET tag firing.</p>
             </div>
           </div>
         </div>
