@@ -16,7 +16,7 @@ Static site for testing the integration between **Microsoft Clarity** and **UET*
 - Contact: `pages/contact.html`
 
 ## Configuration
-The GTM container id used across every page is `GTM-242578999`. Configure that
+The GTM container id used across every page is `GTM-PC77ND9V`. Configure that
 container to load Clarity from the staging tag host.
 
 ## Verifying the integration
