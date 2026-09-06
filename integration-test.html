@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clarity ↔ UET Test Site • Home</title>
+    <meta name="description" content="A static site for testing the integration between Microsoft Clarity and UET via the MsAds partner linking flow." />
+    <meta name="google-site-verification" content="ScYNW9LYapYnzFp-hJct72IO7NpnL2sPmynakqmTnoI" />
+
+    <!-- Google Tag Manager (installs Clarity) -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PC77ND9V');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/site.js"></script>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC77ND9V"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a class="brand" href="index.html" aria-label="Home">
+            <span class="logo" aria-hidden="true"></span>
+            <span>Clarity ↔ UET Test Site</span>
+          </a>
+
+          <div class="navlinks" aria-label="Primary">
+            <a class="pill" data-nav href="index.html">Home</a>
+            <a class="pill" data-nav href="pages/about.html">About</a>
+            <a class="pill" data-nav href="pages/products.html">Products</a>
+            <a class="pill" data-nav href="pages/contact.html">Contact</a>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
+            <a class="btn" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="heroCard">
+            <div class="heroInner">
+              <div>
+                <h1 class="h1">Testing the Clarity &harr; UET integration</h1>
+                <p class="lede">A small static site that loads Microsoft Clarity through Google Tag Manager against the Clarity staging environment. The site intentionally ships no hand-rolled UET so any <span class="code">bat.bing.com</span> traffic you observe is attributable to the Clarity integration.</p>
+
+                <div class="kpis">
+                  <div class="kpi"><strong>GTM-installed</strong><span>Clarity loaded via Google Tag Manager only</span></div>
+                  <div class="kpi"><strong>Staging endpoint</strong><span>claritydashboard.asgfalcon-staging.io</span></div>
+                  <div class="kpi"><strong>No native UET</strong><span>UET is expected to be injected by Clarity</span></div>
+                </div>
+              </div>
+
+              <div class="aside">
+                <div class="card">
+                  <h2>Get started</h2>
+                  <p><a href="pages/about.html">How it works</a> • <a href="pages/contact.html">Contact</a></p>
+                  <div style="height:12px"></div>
+                  <div class="notice small">
+                    Tip: open DevTools &rarr; Network and filter on <span class="code">clarity</span> and <span class="code">bat.bing.com</span> to watch the integration light up.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <h2>1. Page load</h2>
+              <p>GTM bootstraps and injects the Clarity tag against the staging container.</p>
+            </div>
+            <div class="card">
+              <h2>2. Clarity captures</h2>
+              <p>Clarity begins recording session data against the configured staging project.</p>
+            </div>
+            <div class="card">
+              <h2>3. UET injected</h2>
+              <p>If MsAds linking is configured for the project, Clarity drops the UET tag &mdash; verify via <span class="code">bat.bing.com</span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container small">
+        <div>© <span id="y"></span> Test Site • Built for GitHub Pages</div>
+      </div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+      </script>
+    </footer>
+  </body>
+</html>

@@ -1,107 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Clarity ↔ UET Test Site • Home</title>
-    <meta name="description" content="A static site for testing the integration between Microsoft Clarity and UET via the MsAds partner linking flow." />
-    <meta name="google-site-verification" content="ScYNW9LYapYnzFp-hJct72IO7NpnL2sPmynakqmTnoI" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="google-site-verification" content="ScYNW9LYapYnzFp-hJct72IO7NpnL2sPmynakqmTnoI" />
+        <title>Clarity crawling test</title>
+        <style>
+            * { box-sizing: border-box; }
+            body {
+                margin: 0;
+                min-height: 100vh;
+                font-family: "Segoe UI", system-ui, sans-serif;
+                color: #182338;
+                background: radial-gradient(ellipse at top left, #e1eaff, transparent 65%), #f4f6fb;
+                line-height: 1.65;
+            }
+            main { width: min(840px, 100%); margin: 0 auto; padding: 64px 24px; }
+            .badge {
+                display: inline-block;
+                padding: 5px 12px;
+                border: 1px solid #b9caeb;
+                border-radius: 999px;
+                color: #244783;
+                background: #edf3ff;
+                font-size: 13px;
+                font-weight: 600;
+            }
+            h1 { margin: 18px 0 12px; font-size: clamp(30px, 5vw, 46px); line-height: 1.2; letter-spacing: -1px; }
+            h2 { margin: 0 0 12px; font-size: 21px; }
+            p { margin: 0 0 16px; }
+            .intro { max-width: 620px; color: #4c5c74; font-size: 18px; }
+            .card {
+                margin-top: 24px;
+                padding: 28px;
+                border: 1px solid #d9e1ed;
+                border-radius: 18px;
+                background: #fff;
+                box-shadow: 0 10px 32px #18233808;
+            }
+            .label { margin: 0; color: #4c5c74; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+            .project { display: block; margin: 4px 0 20px; font-size: 27px; letter-spacing: 1px; }
+            code { font-family: Consolas, monospace; overflow-wrap: anywhere; }
+            ol { margin: 0; padding-left: 22px; }
+            li + li { margin-top: 12px; }
+            button {
+                padding: 12px 20px;
+                border: 0;
+                border-radius: 9px;
+                background: #2456ce;
+                color: #fff;
+                font: inherit;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            button:hover { background: #1b439f; }
+            button:focus-visible { outline: 3px solid #182338; outline-offset: 4px; }
+            a { color: #2456ce; }
+            a:focus-visible { outline: 3px solid #182338; outline-offset: 4px; }
+            .status { margin: 16px 0 0; color: #4c5c74; }
+            footer { margin-top: 24px; color: #4c5c74; font-size: 14px; }
+        </style>
+        <script>
+            // Matches getExpandedTagCode in the Clarity Dashboard's src/shared/constants.ts.
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "ye46h50l9x");
+        </script>
+    </head>
+    <body>
+        <main>
+            <header>
+                <span class="badge">Clarity · Developer test site</span>
+                <h1>A fresh tag, ready to discover.</h1>
+                <p class="intro">
+                    This page installs a real Clarity tag in its HTML so the static crawler can find it
+                    without waiting for analytics traffic.
+                </p>
+            </header>
 
-    <!-- Google Tag Manager (installs Clarity) -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PC77ND9V');
-    </script>
-    <!-- End Google Tag Manager -->
+            <section class="card" aria-labelledby="setup-heading">
+                <p class="label">Clarity project ID</p>
+                <code class="project">ye46h50l9x</code>
+                <h2 id="setup-heading">Test project discovery</h2>
+                <ol>
+                    <li>
+                        Enter <code>amrzakimicrosoft2000.github.io</code> in the partner linking demo's
+                        <strong>Domain</strong> field. The crawler reads this root page directly.
+                    </li>
+                    <li>
+                        Sign in to Clarity with admin access to this project. Look for <code>ye46h50l9x</code>
+                        in the <code>domainProjects</code> response and its project name in the consent dropdown.
+                    </li>
+                    <li>
+                        The original GTM-based test site is still available at
+                        <a href="integration-test.html">Integration test</a>. This root page uses only the direct Clarity tag.
+                    </li>
+                </ol>
+            </section>
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <script defer src="assets/js/site.js"></script>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PC77ND9V"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="brand" href="index.html" aria-label="Home">
-            <span class="logo" aria-hidden="true"></span>
-            <span>Clarity ↔ UET Test Site</span>
-          </a>
+            <section class="card" aria-labelledby="traffic-heading">
+                <h2 id="traffic-heading">Optional: generate test activity</h2>
+                <p>
+                    Opening this page in a browser loads Clarity and may send analytics. To isolate crawling before
+                    traffic exists, run partner discovery before visiting this website in a browser.
+                    A plain HTML fetch does not execute the tag.
+                </p>
+                <button type="button" id="test-interaction">Send a test interaction</button>
+                <p class="status" id="interaction-status" role="status">No test interactions yet.</p>
+            </section>
 
-          <div class="navlinks" aria-label="Primary">
-            <a class="pill" data-nav href="index.html">Home</a>
-            <a class="pill" data-nav href="pages/about.html">About</a>
-            <a class="pill" data-nav href="pages/products.html">Products</a>
-            <a class="pill" data-nav href="pages/contact.html">Contact</a>
-          </div>
-
-          <div class="actions">
-            <button class="btn" type="button" data-theme-toggle onclick="toggleTheme()">Switch theme</button>
-            <a class="btn" href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="heroCard">
-            <div class="heroInner">
-              <div>
-                <h1 class="h1">Testing the Clarity &harr; UET integration</h1>
-                <p class="lede">A small static site that loads Microsoft Clarity through Google Tag Manager against the Clarity staging environment. The site intentionally ships no hand-rolled UET so any <span class="code">bat.bing.com</span> traffic you observe is attributable to the Clarity integration.</p>
-
-                <div class="kpis">
-                  <div class="kpi"><strong>GTM-installed</strong><span>Clarity loaded via Google Tag Manager only</span></div>
-                  <div class="kpi"><strong>Staging endpoint</strong><span>claritydashboard.asgfalcon-staging.io</span></div>
-                  <div class="kpi"><strong>No native UET</strong><span>UET is expected to be injected by Clarity</span></div>
-                </div>
-              </div>
-
-              <div class="aside">
-                <div class="card">
-                  <h2>Get started</h2>
-                  <p><a href="pages/about.html">How it works</a> • <a href="pages/contact.html">Contact</a></p>
-                  <div style="height:12px"></div>
-                  <div class="notice small">
-                    Tip: open DevTools &rarr; Network and filter on <span class="code">clarity</span> and <span class="code">bat.bing.com</span> to watch the integration light up.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid">
-            <div class="card">
-              <h2>1. Page load</h2>
-              <p>GTM bootstraps and injects the Clarity tag against the staging container.</p>
-            </div>
-            <div class="card">
-              <h2>2. Clarity captures</h2>
-              <p>Clarity begins recording session data against the configured staging project.</p>
-            </div>
-            <div class="card">
-              <h2>3. UET injected</h2>
-              <p>If MsAds linking is configured for the project, Clarity drops the UET tag &mdash; verify via <span class="code">bat.bing.com</span>.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container small">
-        <div>© <span id="y"></span> Test Site • Built for GitHub Pages</div>
-      </div>
-      <script>
-        document.getElementById('y').textContent = new Date().getFullYear();
-      </script>
-    </footer>
-  </body>
+            <footer>
+                Test use only. This page uses Microsoft Clarity analytics; do not enter personal information or secrets.
+                A queued event is not proof of ingestion or successful crawling. Browser privacy settings or blockers may prevent collection.
+            </footer>
+        </main>
+        <script>
+            let interactions = 0;
+            document.getElementById("test-interaction").addEventListener("click", () => {
+                interactions += 1;
+                window.clarity("event", "crawl_test_interaction");
+                document.getElementById("interaction-status").textContent =
+                    `Test interactions queued: ${interactions}. Check Clarity separately to confirm ingestion.`;
+            });
+        </script>
+    </body>
 </html>
